@@ -1,0 +1,21 @@
+{
+  "formatter": {
+    "indentStyle": "space",
+    "indentSize": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "js": {
+        "recommended": true,
+        "noDelete": "off",
+        "noNegationElse": "off",
+        "noShoutyConstants": "off",
+        "noUnusedVariables": "off"
+      },
+      "ts": {
+        "recommended": true
+      }
+    }
+  }
+}

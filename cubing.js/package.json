@@ -1,0 +1,160 @@
+{
+  "name": "cubing",
+  "version": "0.30.0",
+  "description": "A collection of JavaScript cubing libraries.",
+  "author": "The js.cubing.net team",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "repository": "github:cubing/cubing.js",
+  "exports": {
+    "./alg": {
+      "import": "./dist/esm/alg/index.js",
+      "types": "./dist/types/alg/index.d.ts"
+    },
+    "./bluetooth": {
+      "import": "./dist/esm/bluetooth/index.js",
+      "types": "./dist/types/bluetooth/index.d.ts"
+    },
+    "./kpuzzle": {
+      "import": "./dist/esm/kpuzzle/index.js",
+      "types": "./dist/types/kpuzzle/index.d.ts"
+    },
+    "./notation": {
+      "import": "./dist/esm/notation/index.js",
+      "types": "./dist/types/notation/index.d.ts"
+    },
+    "./protocol": {
+      "import": "./dist/esm/protocol/index.js",
+      "types": "./dist/types/protocol/index.d.ts"
+    },
+    "./puzzle-geometry": {
+      "import": "./dist/esm/puzzle-geometry/index.js",
+      "types": "./dist/esm/types/puzzle-geometry/index.d.ts"
+    },
+    "./puzzles": {
+      "import": "./dist/esm/puzzles/index.js",
+      "types": "./dist/esm/types-geometry/index.d.ts"
+    },
+    "./scramble": {
+      "import": "./dist/esm/scramble/index.js",
+      "types": "./dist/types/scramble/index.d.ts"
+    },
+    "./search": {
+      "import": "./dist/esm/search/index.js",
+      "types": "./dist/types/search/index.d.ts"
+    },
+    "./stream": {
+      "import": "./dist/esm/stream/index.js",
+      "types": "./dist/types/stream/index.d.ts"
+    },
+    "./twisty": {
+      "import": "./dist/esm/twisty/index.js",
+      "types": "./dist/types/twisty/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "@types/three": "^0.144.0",
+    "@types/web-bluetooth": "^0.0.15",
+    "comlink": "^4.3.1",
+    "three": "^0.144.0"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@types/chai": "^4.3.3",
+    "@types/dom-speech-recognition": "^0.0.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.2",
+    "@types/yargs": "^17.0.12",
+    "@web/dev-server-esbuild": "^0.3.2",
+    "@web/test-runner": "^0.14.0",
+    "@web/test-runner-playwright": "^0.8.10",
+    "barely-a-dev-server": "^0.3.4",
+    "chai": "^4.3.6",
+    "esbuild": "^0.15.3",
+    "jszip": "^3.10.1",
+    "mocha": "^10.0.0",
+    "peggy": "^2.0.1",
+    "playwright": "^1.25.1",
+    "rome": "^0.9.2-next",
+    "tsup": "^6.2.2",
+    "typedoc": "^0.23.10",
+    "typescript": "^4.7.4",
+    "yargs": "^17.5.1"
+  },
+  "minimalDevDependencies": [
+    "barely-a-dev-server",
+    "esbuild",
+    "jszip",
+    "rome"
+  ],
+  "engines": {
+    "node": "^16.13 || >=18"
+  },
+  "files": [
+    "/LICENSE.md",
+    "/README.md",
+    "/package.json",
+    "/package-lock.json",
+    "/dist/esm/**/*",
+    "/dist/types/**/*",
+    "/*/package.json",
+    "/*/index.d.ts"
+  ],
+  "scripts": {
+    "build": "make build",
+    "build-esm": "make build-esm",
+    "build-types": "make build-types",
+    "build-bin": "make build-bin",
+    "build-sites": "make build-sites",
+    "build-site-twizzle": "make build-site-twizzle",
+    "build-site-experiments": "make build-site-experiments",
+    "build-site-typedoc": "make build-site-typedoc",
+    "build-search-worker": "make build-search-worker",
+    "generate-js": "make generate-js",
+    "generate-js-parsers": "make generate-js-parsers",
+    "generate-js-svg": "make generate-js-svg",
+    "dev": "make dev",
+    "link": "make link",
+    "clean": "make clean",
+    "test": "make test",
+    "test-fast": "make test-fast",
+    "test-all": "make test-all",
+    "test-src": "make test-src",
+    "test-spec": "make test-spec",
+    "test-spec-with-coverage": "make test-spec-with-coverage",
+    "test-spec-watch": "make test-spec-watch",
+    "test-src-internal-import-restrictions": "make test-src-internal-import-restrictions",
+    "test-src-does-not-import-dist": "make test-src-does-not-import-dist",
+    "test-src-tsc": "make test-src-tsc",
+    "test-src-scripts-consistency": "make test-src-scripts-consistency",
+    "fix-src-scripts-consistency": "make fix-src-scripts-consistency",
+    "test-build": "make test-build",
+    "test-dist": "make test-dist",
+    "test-dist-esm-node-import": "make test-dist-esm-node-import",
+    "test-dist-esm-scramble-all-events": "make test-dist-esm-scramble-all-events",
+    "test-dist-esm-perf": "make test-dist-esm-perf",
+    "test-dist-esm-plain-esbuild-compat": "make test-dist-esm-plain-esbuild-compat",
+    "test-dist-esm-parcel": "make test-dist-esm-parcel",
+    "test-dist-esm-vite": "make test-dist-esm-vite",
+    "test-dist-esm-build-size": "make test-dist-esm-build-size",
+    "test-dist-sites-experiments": "make test-dist-sites-experiments",
+    "format": "make format",
+    "setup": "make setup",
+    "quick-setup": "make quick-setup",
+    "lint": "make lint",
+    "lint-ci": "make lint-ci",
+    "prepack": "make prepack",
+    "postpublish": "make postpublish"
+  },
+  "keywords": [
+    "cubing",
+    "speedcubing",
+    "puzzle",
+    "visualization",
+    "kpuzzle",
+    "cuble",
+    "bluetooth",
+    "rubik",
+    "rubik's"
+  ]
+}
