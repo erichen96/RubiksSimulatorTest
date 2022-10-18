@@ -5,10 +5,10 @@
     "dev": "node -e 'import(\"barely-a-dev-server\").then(s => s.barelyServe({entryRoot: \"src\"}))'",
     "clean": "rm -rf ./dist"
   },
-  "dependencies": {
-    "cubing": "^0.30.0"
-  },
   "devDependencies": {
     "barely-a-dev-server": "^0.2.6"
+  },
+  "dependencies": {
+    "cubing": "github:erichen96/cubing.js"
   }
 }
